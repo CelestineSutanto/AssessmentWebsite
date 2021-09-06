@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.myHeader {
+  grid-area: header;
+  background-color: rgb(172, 241, 218);
+  text-align: center;
+  position: fixed;
+  height: 12vh;
+  width: 100%;
+  padding-top: 10px;
+    
+
+}
+.mySidebar {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
+  grid-area: sidebar;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(98, 207, 235);
+
+}
+.myBody {
+  grid-area: body;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.myFooter {
+  grid-area: footer;
+  position: fixed;
+  color: white;
+  background-color: rgb(40, 40, 40);
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+
+}
+.myWrapper {
+  Float: left;
+  display: grid;
+  grid-template-rows: 15vh 75vh 10vh;
+  grid-template-columns: 20vw 80vw;
+  grid-template-areas: "header header" 
+                      "sidebar body" 
+                      "footer footer";
+}
+.HomePage {
+max-width: 100%;
+}
+.topnav {
+overflow: hidden;
+background-color: #333;
+position: relative;
+}
+
+.topnav #myLinks {
+display: none;
+}
+
+.topnav a {
+color: white;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+display: block;
+height: 15px;
+}
+
+.topnav a.icon {
+background: black;
+display: block;
+position: absolute;
+left: 0;
+top: 0;
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.active {
+background-color: rgb(172, 241, 218);
+color: white;
+}
+
+@media (max-width :650px)
+{
+  .myWrapper {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-template-areas: "header" "sidebar" "body" "footer";
+  }
+  .myHeader {
+    grid-area: header;
+  }
+  .mySidebar {
+    grid-area: sidebar;
+  }
+  .myBody {
+    grid-area: body;
+  }
+  .myFooter {
+    grid-area: footer;
+  }
+  .mySidebar a {
+    background-color: rgb(82, 92, 231);
+  }
+
+
+}
