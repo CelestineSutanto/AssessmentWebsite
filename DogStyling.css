@@ -1,94 +1,251 @@
 *{
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  /* Remove the overflow-x later maybe */
+  overflow-x: hidden;
+}
+
 h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 .myHeader {
-    grid-area: header;
-    background-color: rgb(250, 179, 167);
-    text-align: center;
-    position: fixed;
-    height: 12vh;
-    width: 100%;
-      
+  grid-area: header;
+  background-color: rgb(172, 241, 218);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  z-index: 1;
+    
 
 }
 .mySidebar {
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    grid-area: sidebar;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(250, 145, 126);
-    height: 100vh;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 30px;
+  grid-area: sidebar;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(98, 207, 235);
+
+}
+.mySidebar a {
+  display: block;
+  color: black;
+  text-decoration: none;
 
 }
 .myBody {
-    grid-area: body;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+  grid-area: body;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: large;
 
 }
-.myFooter {
-    grid-area: footer;
-    position: fixed;
-    color: white;
-    background-color: rgb(40, 40, 40);
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+.myBody img {
+  margin-top: 20px;
+  width: 90%;
+}
 
+.myFooter {
+  grid-area: footer;
+  position: fixed;
+  color: white;
+  background-color: rgb(40, 40, 40);
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+
+}
+h4 {
+  margin-top: 20px;
+}
+h5 {
+  margin-top: 20px;
+}
+h6 {
+  margin-top: 20px;
 }
 .myWrapper {
-    Float: left;
-    display: grid;
-    grid-template-rows: 15vh 75vh 10vh;
-    grid-template-columns: 20vw 80vw;
-    grid-template-areas: "header header" 
-                        "sidebar body" 
-                        "footer footer";
+  Float: left;
+  display: grid;
+  grid-template-rows: 15vh 83vh 2vh;
+  grid-template-columns: 20vw 80vw;
+  grid-template-areas: "header header" 
+                      "sidebar body"
+                      "footer footer"; 
 }
 .HomePage {
-  max-width: 100%;
+width: 100%;
 }
 .topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+overflow: hidden;
+background-color: #333;
+position: relative;
 }
 
 .topnav #myLinks {
-  display: none;
+display: none;
 }
 
 .topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-  height: 15px;
+color: white;
+padding: 8px 16px;
+text-decoration: none;
+font-size: 15px;
+display: block;
+height: 34px;
+overflow: hidden;
 }
 
 .topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
+background: black;
+display: block;
+position: absolute;
+left: 0;
+top: 0;
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
+  }
 
 .active {
-  background-color: rgb(250, 179, 167);
+background-color: rgb(172, 241, 218);
+color: rgb(172, 241, 218);
+}
+
+@media (max-width :650px)
+{
+  .myWrapper {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-template-areas: "header" "sidebar" "body" "footer";
+  }
+  .myHeader {
+    grid-area: header;
+  }
+  .mySidebar {
+    grid-area: sidebar;
+  }
+  .myBody {
+    grid-area: body;
+  }
+  .myFooter {
+    grid-area: footer;
+  }
+  .mySidebar a {
+    margin-top: 10px;
+  }
+
+
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  height: 90%;
+  width: 60%;
+  overflow: hidden;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.mySlideshowImages {
+  z-index: 0;
+}
+.slideshow-container {
+  z-index: 0;
 }

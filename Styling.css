@@ -87,15 +87,17 @@ position: relative;
 
 .topnav #myLinks {
 display: none;
+overflow: hidden;
 }
 
 .topnav a {
 color: white;
-padding: 14px 16px;
+padding: 8px 16px;
 text-decoration: none;
-font-size: 17px;
+font-size: 15px;
 display: block;
 height: 15px;
+overflow: hidden;
 }
 
 .topnav a.icon {
@@ -142,3 +144,5 @@ color: white;
 
 
 }
+
+
