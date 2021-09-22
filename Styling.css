@@ -129,20 +129,51 @@ color: white;
   .myHeader {
     grid-area: header;
   }
+  
   .mySidebar {
     grid-area: sidebar;
+    /* Grid within a grid for sidebar */
+    /* display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 10vh 45vh 45vh;
+    grid-template-areas: "InThisPage" "InThisPage" "InThisPage" "InThisPage"
+                          "Choosing" "Taking Care" "HowToChoose" "Space"
+                          "Cost" "Time" "Family" "Other"
   }
+  .InThisPage {
+    grid-area: InThisPage; 
+  }
+  .Choosing {
+    grid-area: Choosing;
+  }
+  .TakingCare {
+    grid-area: TakingCare;
+  }
+  .HowToChoose {
+    grid-area: HowToChoose;
+  }
+  .Space {
+    grid-area: Space;
+  }
+  .Cost {
+    grid-area: Cost;
+  }
+  .Time {
+    grid-area: Time;
+  }
+  .Family {
+    grid-area: Family;
+  }
+  .Other {
+    grid-area: Other;
+  } */
+ 
   .myBody {
     grid-area: body;
   }
   .myFooter {
     grid-area: footer;
   }
-  .mySidebar a {
-    margin-top: 10px;
-  }
-
-
 }
 
 
